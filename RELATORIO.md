@@ -379,9 +379,8 @@ javac -d out -cp "lib/easyaccept.jar" @sources.txt
 
 **Windows (PowerShell):**
 ```powershell
-cmd /c "javac -d out -cp lib/easyaccept.jar @sources.txt"
+javac -d out -cp "lib/easyaccept.jar" "@sources.txt"
 ```
-> ⚠️ No PowerShell, `@` é um operador especial (splatting). Use `cmd /c` para invocar o `javac` com argfile corretamente.
 
 ### Rodar um teste individual (Windows)
 ```bash
@@ -389,31 +388,14 @@ java -cp "out;lib/easyaccept.jar" easyaccept.EasyAccept facade.Facade tests/us1_
 ```
 
 ### Rodar todos os testes
-
-**Linux/Mac (bash):**
 ```bash
-./run_tests.sh
+./run_tests.sh    # Linux/Mac
 ```
 
-**Windows (PowerShell):**
+### Rodar todos os testes (Windows)
 ```powershell
-$tests = @(
-  "tests/us1_1.txt","tests/us1_2.txt",
-  "tests/us2_1.txt","tests/us2_2.txt",
-  "tests/us3_1.txt","tests/us3_2.txt",
-  "tests/us4_1.txt","tests/us4_2.txt",
-  "tests/us5_1.txt","tests/us5_2.txt",
-  "tests/us6_1.txt","tests/us6_2.txt",
-  "tests/us7_1.txt","tests/us7_2.txt",
-  "tests/us8_1.txt","tests/us8_2.txt"
-)
-foreach ($t in $tests) {
-    Write-Host "--- Rodando: $t ---"
-    java -cp "out;lib/easyaccept.jar" easyaccept.EasyAccept facade.Facade $t
-}
+java -cp "out;lib\easyaccept.jar" br.ufal.ic.myfood.Main
 ```
-
-> ⚠️ Os testes `*_2.txt` dependem dos dados gravados pelo `*_1.txt` correspondente. Sempre rode `us8_1.txt` antes de `us8_2.txt`, e assim por diante.
 
 ---
 
