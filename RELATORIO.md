@@ -406,7 +406,6 @@ java -cp "out;lib\easyaccept.jar" br.ufal.ic.myfood.Main
 | `RELATORIO.md` | Este relatório |
 | `ARQUITETURA.md` | Documentação técnica da arquitetura e padrões de projeto |
 | `WALKTHROUGH.md` | Guia de uso, comandos, erros comuns e referência rápida |
-| `PROJECT.md` | Prompt de especificação do Milestone 1 |
 | `TEST_RESULTS.md` | Resultados detalhados dos testes de aceitação |
 | `CLAUDE.md` | Notas técnicas do agente para desenvolvimento |
 
